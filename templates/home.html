@@ -1,3 +1,85 @@
-<h1>
-    Prediction Model
-</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('style') }}"> -->
+
+
+</head>
+
+<body>
+    <div class="login">
+    <h1>Price Prediction</h1>
+    <h3>Please input the values below to get a prediction</h3>
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <div class="input-columns">
+        <div class="input-column">
+          <input type="text" name="CRIM" placeholder="CRIM" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="ZN" placeholder="ZN" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="INDUS" placeholder="INDUS" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="CHAS" placeholder="CHAS" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="NOX" placeholder="NOX" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="RM" placeholder="RM" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="Age" placeholder="Age" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="DIS" placeholder="DIS" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="RAD" placeholder="RAD" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="TAX" placeholder="TAX" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="PTRATIO" placeholder="PTRATIO" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="B" placeholder="B" required="required" />
+        </div>
+        <div class="input-column">
+          <input type="text" name="LSTAT" placeholder="LSTAT" required="required" />
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <br>
+    <br>
+    <h2>{{prediction_text}}</h2>
+  </div>
+
+      
+
+  <!-- <div class="container">
+    <div class="prediction-box">
+      <h2>Prediction Result:</h2>
+      <p class="prediction-result">{{ prediction_text }}</p>
+    </div>
+  </div> -->
+
+  <!-- {{prediction_text}}  -->
+</body>
+
+</html>
