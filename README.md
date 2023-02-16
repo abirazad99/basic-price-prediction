@@ -1,4 +1,3 @@
-# end2endMLproj
 ## Price Prediction Model
 
 1. [Dataset](https://scikit-learn.org/0.15/modules/generated/sklearn.datasets.load_boston.html)
@@ -24,4 +23,4 @@ git commit -m "random commit"
 get push <remote> <branch>  i.e. (get push origin main)
 
 ```
-4. 
+4. Deployment
